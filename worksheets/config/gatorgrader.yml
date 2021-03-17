@@ -1,0 +1,34 @@
+---
+name: cmpsc-100-week-3-worksheets
+break: true
+indent: 4
+---
+
+0_week-3-worksheet-lists.ipynb:
+    ConfirmFileExists
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+    MatchFileFragment --fragment "The basket has 4 items" --count 1 --exact
+    MatchFileFragment --fragment "The store_items list has 0 items" --count 1 --exact
+    MatchFileFragment --fragment "store_items = [" --count 1 --exact
+    MatchFileFragment --fragment "store_items.index(" --count 5
+    MatchFileFragment --fragment "basket.index(" --count 1
+    MatchFileFragment --fragment "store_items.remove(" --count 5
+    
+1_week-3-worksheet-slices-tuples.ipynb:
+    ConfirmFileExists
+    MatchFileFragment --fragment "(-6, -5, -4, -3, -2, -1, 0)" --count 1 --exact
+    MatchFileFragment --fragment "(-8, -6, -4, -2, 0, 2, 4, 6, 8)" --count 1 --exact
+    MatchFileFragment --fragment "(-9, -7, -5, -3, -1, 1, 3, 5, 7, 9)" --count 1 --exact
+    MatchFileFragment --fragment "(9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, -9)" --count 1 --exact
+    MatchFileFragment --fragment "(9, 6, 3, 0, -3, -6, -9)" --count 1 --exact
+    MatchFileFragment --fragment "print(integers[-1])" --count 1 --exact
+
+2_week-3-worksheet-for-loops.ipynb:
+    ConfirmFileExists
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+    MatchFileFragment --fragment "well_production = [1440, 1750, 1230, 980, 1900, 1475, 730]" --count 1 --exact
+    MatchFileFragment --fragment "for day in well_production" --count 1 --exact
+    MatchFileFragment --fragment "for name in cat_names" --count 4 --exact
+
+MatchCommandFragment --command "python3 2_week-3-worksheet-for-loops.py < .inputs/.worksheet-2-input" --fragment "You have a below average well" --count 1 --exact
+

@@ -1,0 +1,30 @@
+---
+name: cmpsc-100-week-03-lab
+break: true
+indent: 4
+---
+
+week-3-lab.py:
+    ConfirmFileExists
+    MatchFileFragment --fragment "input(" --count 3 --exact
+    MatchFileFragment --fragment "while" --count 2
+    MatchFileFragment --fragment "box = []" --count 1 --exact
+    MatchFileFragment --fragment "[-1]" --count 1
+    MatchFileFragment --fragment "box.append(" --count 1 --exact
+    MatchFileFragment --fragment "box.remove(" --count 1 --exact
+
+../writing/reflection.md:
+    ConfirmFileExists
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+    CountFileWords --count 200
+
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "purple wizard hat" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "magic dust" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "box of magic wands" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "blue wizard hat" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "stack of Clawparazzis" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "glass beaker" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "green wizard hat" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "Lizard Wizard action figure" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "G. Wiz self portrait" --count 3
+MatchCommandFragment --command "python3 week-3-lab.py < .inputs/.inventory" --fragment "insect collection case" --count 3
