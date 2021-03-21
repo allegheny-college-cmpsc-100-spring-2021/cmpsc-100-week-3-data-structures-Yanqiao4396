@@ -26,13 +26,6 @@ Recall that the _last item_ you put in should be the _first item_ to come out, a
 ```
 Label for the box: {YOUR LABEL HERE}
 
-Item to add: magic dust
-Magic dust added to the box.
-
-Add another item to the box? [Y]es/[N]o: Y
-
-...
-
 Item to add: purple wizard hat
 Magic dust added to the box.
 
